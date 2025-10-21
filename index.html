@@ -1,0 +1,278 @@
+<!-- Save as index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gottaprintem — 3D Prints & Collectibles</title>
+  <meta name="description" content="Gottaprintem — custom 3D prints, collectible figures, commissions. Follow on Instagram and shop our Etsy/Linktree." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#7dd3fc;
+      --glass: rgba(255,255,255,0.04);
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#071023 0%, #071425 60%); color:#e6eef6;}
+    a{color:var(--accent); text-decoration:none}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;backdrop-filter: blur(6px);}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0ea5e9,#06b6d4);border-radius:12px;flex-shrink:0}
+    .logo svg{width:38px;height:38px;filter:drop-shadow(0 6px 18px rgba(6,78,59,0.12))}
+    nav a{margin-left:18px;font-weight:600;color:var(--muted)}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;padding:48px 28px;align-items:center}
+    .hero-left h1{font-size:clamp(28px,5vw,44px);margin:0 0 8px 0;line-height:1.02}
+    .tag{color:var(--muted);margin-bottom:18px}
+    .cta{display:flex;gap:12px}
+    .btn{padding:12px 16px;border-radius:10px;font-weight:700;border:none;cursor:pointer}
+    .btn-primary{background:linear-gradient(90deg,#06b6d4,#7dd3fc);color:#04202a}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    .card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+    .stats{display:flex;gap:12px}
+    .stat{padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);text-align:center}
+    .gallery{padding:24px 28px;display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+    .thumb{position:relative;border-radius:12px;overflow:hidden;cursor:pointer}
+    .thumb img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+    .thumb:hover img{transform:scale(1.05)}
+    footer{padding:20px 28px;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+    /* Lightbox */
+    .lightbox{position:fixed;inset:0;background:rgba(2,6,23,0.9);display:flex;align-items:center;justify-content:center;z-index:60;opacity:0;pointer-events:none;transition:opacity .18s}
+    .lightbox.open{opacity:1;pointer-events:auto}
+    .lightbox img{max-width:92vw;max-height:86vh;border-radius:10px}
+    /* responsive */
+    @media (max-width:920px){
+      .hero{grid-template-columns:1fr; padding:28px}
+      .hero-right{order:2}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo" aria-hidden="true">
+        <!-- simple wordmark/icon svg -->
+        <svg viewBox="0 0 24 24" fill="none" role="img" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="3" width="20" height="14" rx="2" fill="#04202a" opacity=".12"/>
+          <path d="M4 17c0 .55.45 1 1 1h14v-2H5c-.55 0-1 .45-1 1z" fill="#ffffff" opacity=".08"/>
+          <path d="M7 6h10v3H7z" fill="white" opacity=".95" />
+        </svg>
+      </div>
+      <div>
+        <div style="font-weight:800">Gottaprintem</div>
+        <div style="font-size:12px;color:var(--muted)">Custom 3D prints • Collectibles • Commissions</div>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#gallery">Gallery</a>
+      <a href="#shop">Shop</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Custom 3D prints and collectible figures.<br><span style="color:var(--accent)">Made with care in Puerto Rico.</span></h1>
+        <p class="tag">Figures, charms, wall plaques, Funko-styled prints, and toys — commissions welcome.</p>
+        <div class="cta">
+          <button class="btn btn-primary" id="shopBtn">Visit Shop</button>
+          <a class="btn btn-ghost" href="#contact">Request a Quote</a>
+        </div>
+
+        <div style="height:18px"></div>
+        <div class="card" style="max-width:680px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div style="font-size:12px;color:var(--muted)">Instagram</div>
+              <!-- pulled from public profile — replace with live data if desired -->
+              <div style="font-weight:700">@gottaprintem</div>
+              <div style="font-size:13px;color:var(--muted);margin-top:6px">Exploring the world of 3D printing — photos, reels, and shop links.</div>
+            </div>
+            <div class="stats">
+              <div class="stat">
+                <div style="font-weight:800">189</div>
+                <div style="font-size:12px;color:var(--muted)">Posts</div>
+              </div>
+              <div class="stat">
+                <div style="font-weight:800">546</div>
+                <div style="font-size:12px;color:var(--muted)">Followers</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hero-right card">
+        <!-- Instagram embed block (some hosts block remote embeds) -->
+        <div style="font-weight:700;margin-bottom:8px">Featured on Instagram</div>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/gottaprintem/" data-instgrm-version="14" style="background:var(--glass);padding:10px;border-radius:10px;">
+          <a href="https://www.instagram.com/gottaprintem/" target="_blank" rel="noopener noreferrer">@gottaprintem on Instagram</a>
+          <div style="font-size:12px;color:var(--muted);margin-top:6px">Follow for reels, prints, and shop updates.</div>
+        </blockquote>
+        <div style="font-size:12px;color:var(--muted);margin-top:10px">If embeds are blocked by Instagram, the "Visit Profile" button below will open the page directly.</div>
+        <div style="margin-top:12px;display:flex;gap:8px">
+          <a id="visitInstagram" class="btn btn-ghost" href="https://www.instagram.com/gottaprintem/" target="_blank">Visit Profile</a>
+          <a id="visitLinktree" class="btn btn-ghost" href="#" target="_blank">Visit Shop</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="card" style="margin:18px 28px;border-radius:14px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+        <h2 style="margin:0">Gallery</h2>
+        <div style="color:var(--muted);font-size:13px">Tap an image to view larger</div>
+      </div>
+
+      <div id="galleryGrid" class="gallery" aria-live="polite">
+        <!-- thumbnails injected by JS -->
+      </div>
+    </section>
+
+    <section id="shop" class="card" style="margin:18px 28px;border-radius:14px;display:flex;gap:18px;align-items:center;flex-wrap:wrap">
+      <div style="flex:1;min-width:280px">
+        <h3 style="margin:0 0 8px 0">Shop & Commissions</h3>
+        <p style="color:var(--muted);margin:0 0 12px 0">Find ready items or request a custom commission. Available via Linktree / Etsy (link provided below).</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a id="shopPrimary" class="btn btn-primary" href="#" target="_blank">Go to Shop</a>
+          <a class="btn btn-ghost" href="#contact">Commission Form</a>
+        </div>
+      </div>
+      <div style="min-width:220px">
+        <div style="font-size:12px;color:var(--muted)">Quick facts</div>
+        <ul style="margin:8px 0 0 18px;color:var(--muted)">
+          <li>Small-batch prints, finished & painted on request</li>
+          <li>Local pickup available (Puerto Rico)</li>
+          <li>Shipping worldwide — packaging for secure transit</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="card" style="margin:18px 28px;border-radius:14px;padding:18px;display:grid;grid-template-columns:1fr 360px;gap:18px">
+      <div>
+        <h3 style="margin-top:0">Contact & Request Form</h3>
+        <p style="color:var(--muted)">Use the form to request a quote — include size, intended use, and reference images (Instagram links accepted).</p>
+
+        <form id="requestForm" onsubmit="event.preventDefault(); submitForm();" style="display:grid;gap:10px">
+          <input name="name" placeholder="Your name" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
+          <input name="email" placeholder="Email" type="email" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
+          <input name="title" placeholder="Project title (e.g., 'Custom Pikachu charm')" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
+          <textarea name="details" placeholder="Details, size, finish, deadline, links to Instagram posts" rows="5" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
+          <div style="display:flex;gap:10px">
+            <button type="submit" class="btn btn-primary">Send Request</button>
+            <a class="btn btn-ghost" href="mailto:youremail@domain.com?subject=Commission%20Request">Email instead</a>
+          </div>
+        </form>
+        <div id="formMsg" style="color:var(--accent);margin-top:8px;display:none">Thanks — your request was prepared (demo).</div>
+      </div>
+
+      <div style="min-width:240px">
+        <h4 style="margin:0 0 8px 0">Business info</h4>
+        <div style="color:var(--muted);font-size:13px">
+          <p style="margin:0 0 8px 0">Instagram: <a href="https://www.instagram.com/gottaprintem/" target="_blank">@gottaprintem</a></p>
+          <p style="margin:0 0 8px 0">Shop: <a id="shopLink" href="#" target="_blank">Linktree / Etsy</a></p>
+          <p style="margin:0;color:var(--muted)">For urgent requests, send a DM on Instagram.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>© <strong>Gottaprintem</strong> — 3D prints & collectibles</div>
+    <div style="color:var(--muted)">Built from Instagram profile and Linktree references. Follow on Instagram.</div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-hidden="true" onclick="closeLightbox()">
+    <img id="lightboxImg" alt="Expanded gallery image" src="" />
+  </div>
+
+  <script>
+    // ----- CONFIG -----
+    // Replace this URL with your shop (Linktree / Etsy)
+    const shopUrl = "https://linktr.ee/gottaprintem"; // update as needed
+    // Gallery: replace placeholder images with real Instagram/media URLs
+    const galleryData = [
+      // Example structure: { src: "https://your-hosted-image.jpg", caption: "Custom Pikachu charm", postUrl: "https://www.instagram.com/p/EXAMPLE/" }
+      { src: "https://images.unsplash.com/photo-1602524816222-6f92e3b73f6f?q=80&w=1200&auto=format&fit=crop&crop=faces", caption: "Custom figure sample", postUrl: "https://www.instagram.com/p/DHcOypkMvfJ/" },
+      { src: "https://images.unsplash.com/photo-1604943739048-8bfae2e6d77b?q=80&w=1200&auto=format&fit=crop&crop=faces", caption: "Painted finish", postUrl: "https://www.instagram.com/p/DMaobz8O9jm/" },
+      { src: "https://images.unsplash.com/photo-1610608567133-6c7c337fb2c6?q=80&w=1200&auto=format&fit=crop&crop=faces", caption: "Mall event", postUrl: "https://www.instagram.com/p/DMkyRXjuBfj/" }
+    ];
+
+    // set initial buttons/links
+    document.getElementById("visitLinktree").href = shopUrl;
+    document.getElementById("shopPrimary").href = shopUrl;
+    document.getElementById("shopLink").href = shopUrl;
+    document.getElementById("shopBtn").addEventListener("click", ()=> window.open(shopUrl, "_blank"));
+    document.getElementById("visitInstagram").addEventListener("click", ()=> window.open("https://www.instagram.com/gottaprintem/", "_blank"));
+
+    // build gallery
+    const grid = document.getElementById("galleryGrid");
+    galleryData.forEach((item, idx) => {
+      const d = document.createElement("div");
+      d.className = "thumb";
+      d.tabIndex = 0;
+      d.innerHTML = `
+        <img loading="lazy" alt="${escapeHtml(item.caption||'')} - Gottaprintem" src="${item.src}" />
+      `;
+      d.addEventListener("click", ()=> openLightbox(item));
+      d.addEventListener("keypress", (e)=> { if(e.key === "Enter") openLightbox(item) });
+      grid.appendChild(d);
+    });
+
+    // lightbox functions
+    const lb = document.getElementById("lightbox");
+    const lbImg = document.getElementById("lightboxImg");
+    function openLightbox(item){
+      lbImg.src = item.src;
+      lbImg.alt = item.caption || "Image";
+      lb.classList.add("open");
+      lb.setAttribute("aria-hidden","false");
+      // clicking the image goes to original post
+      lbImg.onclick = (ev)=> { ev.stopPropagation(); if(item.postUrl) window.open(item.postUrl, "_blank"); };
+    }
+    function closeLightbox(){
+      lb.classList.remove("open");
+      lb.setAttribute("aria-hidden","true");
+      lbImg.src = "";
+    }
+
+    // demo form submission: open mailto with content
+    function submitForm(){
+      const f = document.getElementById("requestForm");
+      const form = new FormData(f);
+      const name = form.get("name");
+      const email = form.get("email");
+      const title = form.get("title");
+      const details = form.get("details");
+      const subject = encodeURIComponent("Commission request: " + (title || "New project"));
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nDetails:\n${details}\n\n(Prepared from website form.)`);
+      // open mail client with prepared email
+      window.location.href = `mailto:youremail@domain.com?subject=${subject}&body=${body}`;
+      document.getElementById("formMsg").style.display = "block";
+    }
+
+    // small utility
+    function escapeHtml(unsafe) {
+      return unsafe.replace(/[&<"']/g, function(m) {
+        return ({'&':'&amp;','<':'&lt;','"':'&quot;',"'":'&#039;'})[m];
+      });
+    }
+
+    // Optional: load Instagram embed script (if allowed)
+    (function(){
+      const s = document.createElement('script');
+      s.async = true;
+      s.defer = true;
+      s.src = "https://www.instagram.com/embed.js";
+      s.onload = ()=> { /* IG script loaded */ };
+      document.head.appendChild(s);
+    })();
+  </script>
+</body>
+</html>
