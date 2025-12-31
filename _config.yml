@@ -1,5 +1,5 @@
-title: Gottaprintem
-description: Custom 3D printing, prototyping, and design services in Puerto Rico
+title: Gottaprintem 3D Store
+description: Tu tienda de impresión 3D de confianza – productos y calculadora de costos
 theme: jekyll-theme-primer
 
 markdown: kramdown
@@ -8,8 +8,8 @@ plugins:
   - jekyll-seo-tag
 
 collections:
-  portfolio:
-    output: false
+  products:
+    output: true
 
 sass:
   sass_dir: assets/css
