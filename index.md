@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Home
+title: Inicio
 ---
 
-{% include about.html %}
-{% include services.html %}
-{% include portfolio.html %}
-{% include process.html %}
-{% include contact.html %}
+{% include featured-products.html %}
+
+## Calculadora de Costos FDM
+
+{% include cost-calculator.html %}
