@@ -7,6 +7,10 @@ markdown: kramdown
 plugins:
   - jekyll-seo-tag
 
+collections:
+  portfolio:
+    output: false
+
 sass:
   sass_dir: assets/css
   style: compressed
