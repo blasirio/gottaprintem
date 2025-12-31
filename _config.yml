@@ -1,0 +1,12 @@
+title: Gottaprintem
+description: Custom 3D printing, prototyping, and design services in Puerto Rico
+theme: jekyll-theme-primer
+
+markdown: kramdown
+
+plugins:
+  - jekyll-seo-tag
+
+sass:
+  sass_dir: assets/css
+  style: compressed
