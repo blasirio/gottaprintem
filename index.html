@@ -3,214 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gottaprintem | Custom 3D Printing</title>
 
+  <title>Gottaprintem | Custom 3D Printing</title>
   <meta name="description" content="Gottaprintem — Custom 3D printing, prototyping, and design services in Puerto Rico." />
 
-  <style>
-    :root {
-      --bg-dark: #020617;
-      --bg-light: #f8fafc;
-      --primary: #2563eb;
-      --accent: #ef4444;
-      --text-dark: #020617;
-      --text-light: #e5e7eb;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    body {
-      background: var(--bg-light);
-      color: var(--text-dark);
-      line-height: 1.6;
-    }
-
-    header {
-      background: linear-gradient(135deg, var(--bg-dark), #020617);
-      color: var(--text-light);
-      padding: 5rem 1.5rem;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      margin-bottom: 1rem;
-      letter-spacing: -1px;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto 2rem;
-    }
-
-    .cta {
-      display: inline-block;
-      background: var(--primary);
-      color: white;
-      padding: 0.9rem 1.8rem;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    section {
-      padding: 4rem 1.5rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 2.2rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .card {
-      background: white;
-      border-radius: 16px;
-      padding: 2rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .gallery div {
-      background: #e5e7eb;
-      border-radius: 12px;
-      height: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #64748b;
-      font-weight: 500;
-    }
-
-    .steps {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .step {
-      background: white;
-      padding: 2rem;
-      border-radius: 16px;
-      width: 260px;
-      text-align: center;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    }
-
-    form {
-      max-width: 600px;
-      margin: 2rem auto 0;
-      display: grid;
-      gap: 1rem;
-    }
-
-    input, textarea {
-      padding: 0.8rem;
-      border-radius: 10px;
-      border: 1px solid #cbd5f5;
-      font-size: 1rem;
-    }
-
-    button {
-      background: var(--primary);
-      color: white;
-      border: none;
-      padding: 0.9rem;
-      border-radius: 999px;
-      cursor: pointer;
-    }
-
-    footer {
-      background: var(--bg-dark);
-      color: var(--text-light);
-      padding: 2rem 1.5rem;
-      text-align: center;
-      margin-top: 4rem;
-    }
-  </style>
+  <!-- External CSS (static, Jekyll-safe) -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
 
-<header>
-  <h1>Gottaprintem</h1>
-  <p>Bring Your Ideas to Life in 3D — Custom Printing, Prototyping & Design</p>
-  <a href="#contact" class="cta">Get a Quote</a>
-</header>
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Gottaprintem</h1>
+    <p>Bring Your Ideas to Life in 3D — Custom Printing, Prototyping & Design</p>
+    <a href="#contact" class="cta">Get a Quote</a>
+  </header>
 
-<section>
-  <h2>About</h2>
-  <p style="max-width: 800px; margin:auto; text-align:center;">
-    Gottaprintem delivers high-quality custom 3D printing services for creators,
-    makers, and businesses across Puerto Rico.
-  </p>
-</section>
+  <!-- ABOUT -->
+  <section>
+    <h2>About</h2>
+    <p class="center-text">
+      Gottaprintem delivers high-quality custom 3D printing services for creators,
+      makers, and businesses across Puerto Rico. From functional parts to creative designs,
+      we focus on precision, speed, and craftsmanship.
+    </p>
+  </section>
 
-<section>
-  <h2>Services</h2>
-  <div class="grid">
-    <div class="card">Custom 3D Printing</div>
-    <div class="card">3D Design & Modeling</div>
-    <div class="card">Prototyping & Small Runs</div>
-    <div class="card">Functional & Decorative Prints</div>
-  </div>
-</section>
+  <!-- SERVICES -->
+  <section>
+    <h2>Services</h2>
+    <div class="grid">
+      <div class="card">Custom 3D Printing</div>
+      <div class="card">3D Design & Modeling</div>
+      <div class="card">Prototyping & Small Runs</div>
+      <div class="card">Functional & Decorative Prints</div>
+    </div>
+  </section>
 
-<section>
-  <h2>Portfolio</h2>
-  <div class="gallery">
-    <div>Example Print</div>
-    <div>Prototype</div>
-    <div>Custom Part</div>
-    <div>Decor Piece</div>
-  </div>
-</section>
+  <!-- PORTFOLIO -->
+  <section>
+    <h2>Portfolio</h2>
+    <div class="gallery">
+      <div>Example Print</div>
+      <div>Prototype</div>
+      <div>Custom Part</div>
+      <div>Decor Piece</div>
+    </div>
+  </section>
 
-<section>
-  <h2>How It Works</h2>
-  <div class="steps">
-    <div class="step">Upload</div>
-    <div class="step">Print</div>
-    <div class="step">Deliver</div>
-  </div>
-</section>
+  <!-- PROCESS -->
+  <section>
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">Upload</div>
+      <div class="step">Print</div>
+      <div class="step">Deliver</div>
+    </div>
+  </section>
 
-<section id="contact">
-  <h2>Request a Quote</h2>
-  <form>
-    <input type="text" placeholder="Name" required />
-    <input type="email" placeholder="Email" required />
-    <textarea rows="4" placeholder="Describe your project"></textarea>
-    <button type="submit">Send</button>
-  </form>
-</section>
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Request a Quote</h2>
+    <form>
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea rows="4" placeholder="Describe your project"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
 
-<footer>
-  <p>© 2025 Gottaprintem • Puerto Rico</p>
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Gottaprintem • Puerto Rico</p>
+  </footer>
 
 </body>
 </html>
