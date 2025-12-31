@@ -1,1 +1,12 @@
+<section>
+  <h2>Portfolio</h2>
 
+  <div class="gallery">
+    {% for item in site.portfolio %}
+      <div class="card">
+        <strong>{{ item.title }}</strong>
+        <p>{{ item.description }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
