@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gottaprintem | Custom 3D Printing</title>
+
+  <style>
+    :root {
+      --bg-dark: #0f172a;
+      --bg-light: #f8fafc;
+      --primary: #3b82f6;
+      --accent: #ef4444;
+      --text-dark: #0f172a;
+      --text-light: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--bg-dark), #020617);
+      color: var(--text-light);
+      padding: 5rem 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    .cta {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 0.9rem 1.8rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+    }
+
+    section {
+      padding: 4rem 1.5rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .gallery div {
+      background: #e5e7eb;
+      border-radius: 12px;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .step {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .step span {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    form {
+      max-width: 600px;
+      margin: 2rem auto 0;
+      display: grid;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      padding: 0.8rem;
+      border-radius: 10px;
+      border: 1px solid #cbd5f5;
+      font-size: 1rem;
+    }
+
+    button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.9rem;
+      border-radius: 999px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    footer {
+      background: var(--bg-dark);
+      color: var(--text-light);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header>
+    <h1>Gottaprintem</h1>
+    <p>Bring Your Ideas to Life in 3D — Custom 3D Printing, Prototyping, and Design Made in Puerto Rico.</p>
+    <a href="#contact" class="cta">Get a Quote</a>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p style="max-width: 800px; margin: auto; text-align: center;">
+      Gottaprintem is a modern 3D printing studio focused on precision, creativity, and fast turnaround.
+      We help creators, makers, and businesses transform ideas into high-quality physical products.
+    </p>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Custom 3D Printing</h3>
+        <p>High-quality prints made to order using professional-grade materials.</p>
+      </div>
+      <div class="card">
+        <h3>3D Design & Modeling</h3>
+        <p>From sketches to CAD — we help bring your concept to reality.</p>
+      </div>
+      <div class="card">
+        <h3>Prototyping & Small Runs</h3>
+        <p>Perfect for testing, iteration, and short production batches.</p>
+      </div>
+      <div class="card">
+        <h3>Functional & Decorative Prints</h3>
+        <p>Custom tools, enclosures, organizers, art pieces, and more.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <h2>Portfolio</h2>
+    <div class="gallery">
+      <div>3D Print Example</div>
+      <div>Prototype Sample</div>
+      <div>Custom Part</div>
+      <div>Decorative Print</div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <span>1</span>
+        <h3>Upload</h3>
+        <p>Send us your idea or 3D file.</p>
+      </div>
+      <div class="step">
+        <span>2</span>
+        <h3>Print</h3>
+        <p>We print with precision and care.</p>
+      </div>
+      <div class="step">
+        <span>3</span>
+        <h3>Deliver</h3>
+        <p>Pickup or delivery — ready to use.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Request a Quote</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Describe your project"></textarea>
+      <button type="submit">Send Request</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Gottaprintem • Custom 3D Printing • Puerto Rico</p>
+    <p>Follow us on Facebook & Instagram</p>
+  </footer>
+
+</body>
+</html>
